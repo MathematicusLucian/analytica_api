@@ -3,6 +3,7 @@
 
     $mps = [];
 
+    //need filter by gender - and random
     $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE 1";
 
     $result = $conn->query($sql);
