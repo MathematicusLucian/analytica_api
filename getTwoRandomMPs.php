@@ -1,10 +1,12 @@
 <?php
     include 'db-login.php'; 
+    
+    $gender =  $_GET["g"]; 
 
-    $mps = [];
+    $mps = [];  
 
     //need filter by gender - and random
-    $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE 1";
+    $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE 1 ORDER BY RAND() LIMIT 2";
 
     $result = $conn->query($sql);
     
