@@ -3,7 +3,7 @@
     
     $id =  $_GET["id"];  
 
-    $sql = "SELECT `code_press`, `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE 1";
+    $sql = "SELECT `code_press`, `mp_name`,`constit`,`rating`,`mp_img` FROM `mps` WHERE 1";
 
     $result = $conn->query($sql);
     
@@ -12,8 +12,8 @@
         while($row = $result->fetch_assoc()) {
             $mps[$i]["id"] = $row["code_press"];
             $mps[$i]["name"] = $row["mp_name"];
-            $mps[$i]["constit"] = $row[" constit"];
-            $mps[$i]["img"] = $row[" mp_img"];
+            $mps[$i]["constit"] = $row["constit"];
+            $mps[$i]["img"] = $row["mp_img"];
             $mps[$i]["gender"] = "1";
             $mps[$i]["rating"] = $row["rating"];
             $i++;

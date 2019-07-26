@@ -3,7 +3,7 @@
     
     $id =  $_GET["id"];  
 
-    $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE `code_press` =" . $id;
+    $sql = "SELECT `mp_name`,`constit`,`rating`,`mp_img` FROM `mps` WHERE `code_press` =" . $id;
 
     $result = $conn->query($sql);
     
@@ -11,10 +11,10 @@
         $i = 0;
         while($row = $result->fetch_assoc()) {
             $mps[$i]["name"] = $row["mp_name"];
-            $mps[$i]["img"] = $row[" mp_img"];
+            $mps[$i]["img"] = $row["mp_img"];
             $mps[$i]["gender"] = "1";
             $mps[$i]["rating"] = $row["rating"];
-            //$mps[$i]["constit"] = $row[" constit"];
+            //$mps[$i]["constit"] = $row["constit"];
             $i++;
         }
         echo json_encode(['data'=>$mps]);
