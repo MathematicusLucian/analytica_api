@@ -6,7 +6,7 @@
     $mp_data = getMP($mp_id, $conn);  
 
     if($mp_data!="FAIL"){
-        echo json_encode($mp_data);
+        echo json_encode(['data'=>$mp_data]);
     }else{
         http_response_code(404);
     }
