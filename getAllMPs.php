@@ -10,6 +10,7 @@
     if ($result->num_rows > 0) {
         $i = 0;
         while($row = $result->fetch_assoc()) {
+            $mps[$i]["id"] = $row["code_press"];
             $mps[$i]["name"] = $row["mp_name"];
             $mps[$i]["constit"] = $row[" constit"];
             $mps[$i]["img"] = $row[" mp_img"];
