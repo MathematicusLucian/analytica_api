@@ -6,7 +6,7 @@
     $mps = [];  
 
     //need filter by gender - and random
-    $sql = "SELECT `mp_name`,`constit`,`rating`,`mp_img` FROM `mps` WHERE 1 ORDER BY RAND() LIMIT 2";
+    $sql = "SELECT `mp_name`,`constit`,`rating`,`gender`,`mp_img` FROM `mps` WHERE `gender` = " . $gender . " ORDER BY RAND() LIMIT 2";
 
     $result = $conn->query($sql);
     
@@ -15,7 +15,7 @@
         while($row = $result->fetch_assoc()) {
             $mps[$i]["name"] = $row["mp_name"];
             $mps[$i]["img"] = $row["mp_img"];
-            $mps[$i]["gender"] = "1";
+            $mps[$i]["gender"] = $row["gender"];
             $mps[$i]["rating"] = $row["rating"];
             //$mps[$i]["constit"] = $row["constit"];
             $i++;
