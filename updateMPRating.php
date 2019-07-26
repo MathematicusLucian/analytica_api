@@ -1,8 +1,12 @@
 <?php
     include 'db-login.php'; 
     
-    $rating =  $_GET["rating"];  
-    $id =  $_GET["id"];  
+    $winner =  $_GET["w"];  
+    $loser =  $_GET["l"];  
+
+    $mps[0]["update"] = "SUCCESS";
+
+    echo json_encode(['data'=>$mps]);
     
     $conn->close();
 ?>
