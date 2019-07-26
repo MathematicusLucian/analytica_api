@@ -1,7 +1,7 @@
 <?php
-    $id =  $_GET["id"]; 
-
     include 'db-login.php'; 
+    
+    $id =  $_GET["id"];  
 
     $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE `code_press` =" . $id;
 

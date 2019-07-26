@@ -1,7 +1,7 @@
 <?php
-    $gender =  $_GET["g"]; 
-
     include 'db-login.php'; 
+    
+    $gender =  $_GET["g"]; 
 
     $sql = "SELECT COUNT(`code_press`) AS count FROM `mps` WHERE 1";
 
