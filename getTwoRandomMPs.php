@@ -4,7 +4,7 @@
     $gender =  $_GET["g"]; 
 
     $mps = [];  
- 
+
     $sql = "SELECT `code_press`,`mp_name`,`constit`,`rating`,`gender`,`mp_img` FROM `mps` WHERE `gender` = " . $gender . " ORDER BY RAND() LIMIT 2";
 
     $result = $conn->query($sql);
