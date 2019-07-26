@@ -11,9 +11,10 @@
         $i = 0;
         while($row = $result->fetch_assoc()) {
             $mps[$i]["name"] = $row["mp_name"];
-            $mps[$i]["constit"] = $row[" constit"];
-            $mps[$i]["rating"] = $row["rating"];
             $mps[$i]["img"] = $row[" mp_img"];
+            $mps[$i]["gender"] = "1";
+            $mps[$i]["rating"] = $row["rating"];
+            //$mps[$i]["constit"] = $row[" constit"];
             $i++;
         }
         echo json_encode(['data'=>$mps]);

@@ -3,7 +3,7 @@
     
     $id =  $_GET["id"];  
 
-    $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE `code_press` =" . $id;
+    $sql = "SELECT `mp_name`,` constit`,`rating`,` mp_img` FROM `mps` WHERE `code_press` = 1";
 
     $result = $conn->query($sql);
     
